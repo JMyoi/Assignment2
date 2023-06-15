@@ -5,16 +5,12 @@ for(let i = 0; i<ary.length; i++){
 }
 return undefined;
 };
-
 let Array = [1,2,3,4];
-
 function print(num){
     console.log(num);
 }
 
 //myEach(print,Array);
-
-
 
 // map() function
 
@@ -50,10 +46,59 @@ function filter(callbackfunc, ary){
 function has3letters(string){
     return string.length===3;
 }
+
 let stringAry = ['Jacob', "bob", "sam", "johnathan"];
 
 newArray = filter(has3letters, stringAry);
-console.log(newArray)
+//console.log(newArray)
+
+
+//some()
+function mySome(callbackfunc, ary){
+    for(let i = 0; i<ary.length; i++){
+        if(callbackfunc(ary[i])){
+            return true;
+        }
+    }
+    return false;
+}
+
+function isEven(num){
+    if(num%2 == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+let testAry = [1,3,5,7,9];
+console.log(mySome(isEven, testAry))
+
+
+//every() function
+
+function myEvery(callbackfunc, ary){
+    for(let i = 0; i<ary.length; i++){
+        if(!callbackfunc(ary[i])){
+            return false;
+        }
+    }
+    return true;
+}
+function isOdd(num){
+    if(num%2==0){
+        return false;
+    }
+    else{
+        return true;
+    }
+
+}
+
+
+
+console.log()
 
 
 
